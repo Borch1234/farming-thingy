@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Simulator</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="game-container">
+                    <canvas id="gameCanvas"></canvas>
+                </div>
+                <div class="toolbar-container mt-2 text-center">
+                    <!-- Toolbar will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="inventory-panel">
+                    <h3>Inventory</h3>
+                    <div id="inventory" class="inventory-grid"></div>
+                </div>
+                <div class="controls-panel mt-3">
+                    <h3>Controls</h3>
+                    <p>Arrow keys / WASD - Move</p>
+                    <p>1-4 - Select tool</p>
+                    <p>Space - Use selected tool</p>
+                    <p>Tools:</p>
+                    <ul>
+                        <li>1 - Till soil</li>
+                        <li>2 - Plant seed</li>
+                        <li>3 - Water plant</li>
+                        <li>4 - Harvest</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/world.js"></script>
+    <script src="/static/js/player.js"></script>
+    <script src="/static/js/crops.js"></script>
+    <script src="/static/js/inventory.js"></script>
+    <script src="/static/js/toolbar.js"></script>
+    <script src="/static/js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+#gameCanvas {
+    background-color: var(--bs-dark);
+    border: 2px solid var(--bs-secondary);
+    width: 800px;  /* Set fixed width to match world size */
+    height: 576px; /* Set fixed height to match world size (18 tiles * 32px) */
+}
+
+.inventory-panel, .controls-panel {
+    background-color: var(--bs-dark);
+    border: 1px solid var(--bs-secondary);
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.inventory-item {
+    background-color: var(--bs-secondary);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.game-container {
+    overflow: auto;
+    max-width: 100%;
+}
+
+.toolbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.toolbar-slot {
+    width: 70px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8em;
+    position: relative;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+
+.toolbar-slot.selected {
+    border-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.toolbar-slot .key-hint {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+.tool-icon {
+    margin-bottom: 5px;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
